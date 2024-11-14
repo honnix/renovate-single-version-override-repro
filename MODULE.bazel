@@ -1,0 +1,9 @@
+bazel_dep(name = "grpc-java")
+single_version_override(
+    module_name = "grpc-java",
+    patch_strip = 1,
+    patches = [
+        "//:foo.patch",
+    ],
+    version = "1.66.0",
+)
